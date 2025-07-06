@@ -45,7 +45,8 @@ router.post("/",validdata, async (req,res)=>{
    console.log(token)
    res.cookie("AUTH",token,{
     httpOnly:true,
-    secure:false,
+    secure:true,
+    sameSite:"none",
          credentials: "include"
    }).status(200).json({message:role,name:naam,mail:mail})
 
