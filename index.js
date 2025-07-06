@@ -15,7 +15,7 @@ require("./absent.js")
 
 const cors = require("cors")
 app.use(cors({
-    origin: "http://localhost:5173", 
+    origin: "https://employee-desk-frontend.vercel.app", 
   credentials: true,
 }))
 const port=5000;
