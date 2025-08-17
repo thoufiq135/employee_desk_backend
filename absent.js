@@ -13,7 +13,7 @@ cron.schedule("59 23 * * * ",async()=>{
         const employee=await mongodbemp.find()
     
             for(const emp of employee){
-                if(emp.Role!=="Admin") continue;
+                if(emp.Role=="Admin") continue;
             const filled = await datamodel.findOne({
                 Employee_ID:emp._id,
                 date:{$gte:today,$lt:tommorow}

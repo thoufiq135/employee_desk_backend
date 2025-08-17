@@ -1,6 +1,6 @@
 const mongo=require("mongoose")
 require("dotenv").config();
-const connectdb=()=>{console.log("came")
+const connectdb=()=>{
     mongo.connect(process.env.MONGO_URI).then((e)=>console.log("Connected to database")).catch((e)=>console.log("error connecting to database",e))
 }
 const employee_Schema=new mongo.Schema({
